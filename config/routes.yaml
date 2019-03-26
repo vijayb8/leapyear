@@ -1,0 +1,10 @@
+# config/routes.yaml
+
+# the "app_leap_year" tells if the year is a leap year
+app_leap_year:
+  path: /leap/{year}
+  controller: App\Controller\LeapController::show
+  defaults:
+    year: 1988
+  requirements:
+    year: '^\d{4}$'
